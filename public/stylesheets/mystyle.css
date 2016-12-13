@@ -1,22 +1,65 @@
-main {
-  padding: 0;
-  margin: 0;
-}
+
 
 .jumbotron {
   max-height: 16%;
-  background-color: green !important;
+  background-color: green;
+  padding: 0;
+  margin: 0;
 }
 .first {
   max-height: 30%;
 }
+.signin {
+  max-width: 330px;
+  margin-right: auto;
+  margin-left: auto;
 
+}
+.signup {
+  max-width: 330px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*.carousel-item {
+  width: 70%;
+  margin: auto;
+  /*max-height: 45vh;
 
+}*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
 
-
-
-
-
+/*white color for text*/
+.color1 {
+    color: white;
+  }
+  /*sleek grey color for text*/
+.color2 {
+  color: #A5A5AF;
+}
+/*sleek grey color for background*/
+.color3 {
+background-color: #A5A5AF;
+}
+/*feather color for background*/
+.color4 {
+  background-color: #77C9D4;
+}
+/*marine color for background*/
+.color5 {
+  background-color: #57BC90;
+}
+/*forest color for background*/
+.color6 {
+  background-color: #015249;
+}
+/*forest color for text */
+.color7 {
+  color: #015249;
+}
 
 
 

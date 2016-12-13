@@ -71,6 +71,11 @@ app.get('/edit', function(req, res) {
   })
 })
 
+// login and signup page
+app.get('/login', function(req, res) {
+    res.render('pages/signin')
+})
+
 
 // view itinary page
 app.get('/itinary', function(req, res) {
