@@ -3,7 +3,10 @@ const bodyParser= require('body-parser')
 const app = express()
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('views', './views')
+// app.set('images', './images')
+// app.set('stylesheets', './stylesheets')
 app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public'))
 
 const MongoClient = require('mongodb').MongoClient
 // connect to database
@@ -66,4 +69,10 @@ app.get('/edit', function(req, res) {
         tagline: tagline
     })
   })
+})
+
+
+// view itinary page
+app.get('/itinary', function(req, res) {
+    res.render('pages/itinary')
 })
