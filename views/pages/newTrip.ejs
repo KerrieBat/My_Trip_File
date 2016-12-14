@@ -1,0 +1,96 @@
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+      <div class="jumbotron color2 color6">
+          <h1>New trip</h1>
+      </div>
+<!-- trip details input field -->
+      <div class="container">
+        <form action = "/newTrip" method = "POST" class="">
+          <h2>
+            <div class="row color7">
+              <div class="col-sm-4">
+                <label class="newTrip">Trip name</label>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="placeholder color7" placeholder="describe trip">
+              </div>
+            </div>
+          </h2>
+
+          <h2>
+            <div class="row color7">
+              <div class="col-sm-4">
+                <label class="newTrip">Where to?</label>
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="placeholder color7" placeholder="main destination">
+              </div>
+            </div>
+          </h2>
+
+          <h2>
+            <div class="row color7">
+              <div class="col-sm-4">
+                <label class="newTrip">Start date</label>
+              </div>
+              <div class="col-sm-6">
+                <input type="date" class="placeholder color7" placeholder="leave date">
+              </div>
+            </div>
+          </h2>
+
+          <h2>
+            <div class="row color7">
+              <div class="col-sm-4">
+                <label class="newTrip">End date</label>
+              </div>
+              <div class="col-sm-4">
+                <input type="date" class="placeholder color7" placeholder="return date">
+              </div>
+              <div class="col-sm-4">
+                Days : <%  %>
+              </div>
+            </div>
+          </h2>
+
+          <h2>
+            <div class="row color7">
+              <div class="col-sm-4">
+                <label class="newTrip">No. of people</label>
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="placeholder color7" placeholder="number">
+              </div>
+            </div>
+          </h2>
+
+          <button class="color2 color6 btn btn-lg btn-primary btn-block" type="submit">Create</button>
+
+          <!-- <h2 class="color7"><label class="col-md-6">Where to?</label>
+          <input type="text" class="placeholder color7" placeholder="main destination" ></h2>
+          <h2 class="color7"><label class="col-md-6">Start date</label>
+          <input type="text" class="placeholder col-md-6 color7" placeholder="leave date" ></h2>
+          <h2 class="color7"><label class="col-md-6">End date</label>
+          <input type="text" class="placeholder col-md-6 color7" placeholder="return date" >
+          Days : <%  %>
+          </h2>
+
+                  <button class="color2 color6 btn btn-lg btn-primary btn-block" type="submit">Create</button> -->
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>

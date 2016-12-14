@@ -10,13 +10,22 @@
     </header>
 
     <main>
-      <div class="jumbotron">
+      <div class="color2 color6 jumbotron">
           <h1>Itinary</h1>
-          <p>trip name .... here</p>
-          <p>x days   style - family friendly</p>
+          <div class="row itinDeets">
+            <div class="col-sm-4">
+              trip name ....
+            </div>
+            <div class="col-sm-4">
+              days ....
+            </div>
+            <div class="col-sm-4">
+              style ....
+            </div>
+          </div>
       </div>
 
-      <table class="table table-sm table-bordered table-striped">
+      <table class="color7 table table-sm table-bordered table-striped">
         <thead class="thead-inverse">
           <tr>
             <th>Date</th>
@@ -49,16 +58,16 @@
         </tbody>
       </table>
 
-      <nav class="navbar navbar-inverse">
+      <!-- <nav class="navbar">
         <div class="container-fluid">
           <!-- <div class="navbar-header">
             <a class="navbar-brand" href="#">WebSiteName</a>
           </div> -->
-          <ul class="nav navbar-nav">
+          <!-- <ul class="color5 color7 nav navbar-nav">
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">View details
               <span class="caret"></span></a>
-              <ul class="dropdown-menu">
+              <ul class="color4 color6 dropdown-menu">
                 <li><a href="/flights"><figure>Flights</figure></a></li>
                 <li><a href="/accom">Accommodation</a></li>
                 <li><a href="/car">Land travel</a></li>
@@ -72,6 +81,27 @@
             <li><a href="/print">Print itinary</a></li>
           </ul>
         </div>
+      </nav> -->
+      <nav class="navbar">
+          <div class="container-fluid">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">View details
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/flights"><figure>Flights</figure></a></li>
+                    <li><a href="/accom">Accommodation</a></li>
+                    <li><a href="/car">Land travel</a></li>
+                    <li><a href="/activities"><figure>Activites</figure></a></li>
+                    <li><a href="/references">References</a></li>
+                    <li><a href="/insurance">Insurance</a></li>
+                    <li><a href="/packing">Packing List</a></li>
+                  </ul>
+                </li>
+                <li><a href="/share">Share Trip</a></li>
+                <li><a href="/print">Print itinary</a></li>
+              </ul>
+          </div>
       </nav>
 
     </main>

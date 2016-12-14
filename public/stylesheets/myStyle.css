@@ -1,5 +1,10 @@
+html {
+  background-color: #E9E9E9;
+}
 .container {
   max-width: 750px;
+  background-color: #E9E9E9;
+
 }
 
 .jumbotron {
@@ -38,34 +43,58 @@
 .color1 {
     color: white;
   }
-  /*sleek grey color for text*/
+  /*linen color for text*/
 .color2 {
-  color: #A5A5AF;
+  color: #E9E9E9;
 }
-/*sleek grey color for background*/
+/*linen color for background*/
 .color3 {
-background-color: #A5A5AF;
+background-color: #E9E9E9;
 }
-/*feather color for background*/
+/*plaster grey color for font*/
 .color4 {
-  background-color: #77C9D4;
+  color: #CDCDCD;
 }
-/*marine color for background*/
+/*ice blue color for background*/
 .color5 {
-  background-color: #57BC90;
+  background-color: #99D3DF;
 }
-/*forest color for background*/
+/*freshwater blue color for background*/
 .color6 {
-  background-color: #015249;
+  background-color: #88BBD6;
 }
-/*forest color for text */
+/*freahwater blue color for text */
 .color7 {
-  color: #015249;
+  color: #88BBD6;
 }
 
-
-
-
+.btn:hover {
+  background-color: #E9E9E9;
+  color: #88BBD6;
+}
+label {
+  color: #88BBD6;
+}
+.placeholder {
+  font-size: 0.7em;
+  padding-left: 1em;
+}
+h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+a {
+  color: #CDCDCD;
+}
+a:hover {
+  color: #E9E9E9;
+}
+.newTrip {
+  padding-left: 1em;
+}
+.itinDeets {
+  font-size: 1.6em;
+}
 
 .bee {
   max-width: 20px;
