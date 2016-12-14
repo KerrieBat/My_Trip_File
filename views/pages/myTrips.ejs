@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="color6 container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+      <div class="jumbotron">
+          <h1>My trips</h1>
+          <p>...select a trip</p>
+      </div>
+      <!-- insert list of trips here -->
+      <table class="table table-sm table-bordered table-striped">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Trip name</th>
+            <th>Reference</th>
+            <th>Start date</th>
+            <th>End date</th>
+          </tr>
+        </thead>
+        <tbody>
+      <!-- loop to insert trip details -->
+          <tr>
+            <td>1st June</td>
+            <td>Intercontinental</td>
+            <td>visit park</td>
+            <td>
+                <li>booked for 1 night only</li>
+                <li>park open till 4pm</li>
+              </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>

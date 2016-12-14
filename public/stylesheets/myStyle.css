@@ -1,4 +1,6 @@
-
+.container {
+  max-width: 750px;
+}
 
 .jumbotron {
   max-height: 16%;
@@ -20,17 +22,17 @@
   margin-right: auto;
   margin-left: auto;
 }
-/*.carousel-item {
+.carousel-inner .item {
   width: 70%;
   margin: auto;
-  /*max-height: 45vh;
 
-}*/
-.carousel-inner > .item > img,
+
+}
+/*.carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
+      /*width: 70%;*/
+      /*margin: auto;
+  }*/
 
 /*white color for text*/
 .color1 {
