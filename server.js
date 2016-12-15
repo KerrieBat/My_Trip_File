@@ -1,27 +1,28 @@
 const express = require('express')
 const bodyParser= require('body-parser')
 const app = express()
+// const mongoose = require("mongoose")
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('views', './views')
-// app.set('images', './images')
-// app.set('stylesheets', './stylesheets')
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
 app.use('jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 const MongoClient = require('mongodb').MongoClient
-// connect to database
+
 var db
+var userid
+var tripid
+
+// connect to database
 MongoClient.connect('mongodb://kerriebat:test@ds061206.mlab.com:61206/my_trip_file', (err, database) => {
   // ... start the server, do something here
-
   if (err) return console.log(err)
   db = database
   app.listen(8080, function() {
     console.log('listening on 8080')
   })
 })
-
 
 // All your handlers here...
 console.log('may node be with you')
@@ -44,8 +45,6 @@ console.log('may node be with you')
 // Header nav bar
 //home page
 app.get('/', (req, res) => {
-
-    // send HTML file populated with quotes here
     res.render('pages/index')
 })
 
@@ -54,17 +53,33 @@ app.get('/about', function(req, res) {
     res.render('pages/about')
 })
 
-// login and signup page
 app.get('/login', function(req, res) {
     res.render('pages/signin')
 })
 
-app.post('/signup', (req, res) => {
+// login and signup page
+//if you signin, get details from users about trip and redirect to myTrips
+app.get('/signin', (req, res) => {
+  db.collection('users').find().toArray(function(err, results) {
+    if (err) return console.log(err)
+    db.collection('trips').find().toArray(function(err, results) {
+      if (err) return console.log(err)
+      res.render('pages/myTrips', {
+        trips:results
+      })
+    })
+  })
+})
+
+
+//if you register, save details to users and redirect to newTrip
+app.post('/signin', (req, res) => {
   db.collection('users').save(req.body, (err, result) => {
     if (err) return console.log(err)
-
+    //pass user id
+    var userid =
     console.log('logged in')
-    res.redirect('pages/mytrips')
+    res.render('pages/newTrip')
   })
 })
 
@@ -74,35 +89,40 @@ app.get('/new', function(req, res) {
 })
 
 // edit trips page
-app.get('/edit', function(req, res) {
-  db.collection('quotes').find().toArray(function(err, results) {
-  if (err) return console.log(err)
-  var trips = [
-    { name: 'Europe 2017', days: 12 },
-            { name: 'USA', days: 15 },
-            { name: 'England', days: 10 }
-        ]
-  var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
-
-
-    res.render('pages/editTrip', {
-        quotes: results,
-        trips: trips,
-        tagline: tagline
-    })
-  })
-})
+// app.get('/edit', function(req, res) {
+//   db.collection('quotes').find().toArray(function(err, results) {
+//   if (err) return console.log(err)
+//   var trips = [
+//     { name: 'Europe 2017', days: 12 },
+//             { name: 'USA', days: 15 },
+//             { name: 'England', days: 10 }
+//         ]
+//   var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
+//
+//
+//   res.render('pages/editTrip', {
+//       quotes: results,
+//       trips: trips,
+//       tagline: tagline
+//   })
+//   })
+// })
 
 
 // view trips page
 app.get('/myTrips', function(req, res) {
-    res.render('pages/myTrips')
+  db.collection('trips').find().toArray(function(err, results) {
+    if (err) return console.log(err)
+    res.render('pages/myTrips', {
+        trips: results,
+    })
+  })
 })
 
 //myTrips nav bar
-// view itinary page
-app.get('/itinary', function(req, res) {
-    res.render('pages/itinary')
+// view itinerary page
+app.get('/itinerary', function(req, res) {
+    res.render('pages/itinerary')
 })
 app.get('/share', function(req, res) {
     res.render('pages/shareTrip')
@@ -111,7 +131,7 @@ app.get('/share', function(req, res) {
 //     res.render('pages/editTrip')
 // })
 
-//edit trip and itinary nav bar
+//edit trip and itinerary nav bar
 app.get('/flights', function(req, res) {
     res.render('pages/flights')
 })
@@ -138,5 +158,9 @@ app.get('/share', function(req, res) {
 })
 app.get('/print', function(req, res) {
     //make it print
-    res.redirect('pages/editTrip')
+    res.render('pages/editTrip')
+})
+app.get('/return', function(req, res) {
+    //
+    res.render('pages/itinerary')
 })

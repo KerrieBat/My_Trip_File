@@ -20,7 +20,7 @@
                 <label class="newTrip">Trip name</label>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="placeholder color7" placeholder="describe trip">
+                <input type="text" name = "name" class="placeholder color7" placeholder="describe trip">
               </div>
             </div>
           </h2>
@@ -31,7 +31,7 @@
                 <label class="newTrip">Where to?</label>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="placeholder color7" placeholder="main destination">
+                <input type="text" name = "where" class="placeholder color7" placeholder="main destination">
               </div>
             </div>
           </h2>
@@ -42,7 +42,7 @@
                 <label class="newTrip">Start date</label>
               </div>
               <div class="col-sm-6">
-                <input type="date" class="placeholder color7" placeholder="leave date">
+                <input type="date" name = "start" class="placeholder color7">
               </div>
             </div>
           </h2>
@@ -53,7 +53,7 @@
                 <label class="newTrip">End date</label>
               </div>
               <div class="col-sm-4">
-                <input type="date" class="placeholder color7" placeholder="return date">
+                <input type="date" name = "end" class="placeholder color7" >
               </div>
               <div class="col-sm-4">
                 Days : <%  %>
@@ -67,11 +67,20 @@
                 <label class="newTrip">No. of people</label>
               </div>
               <div class="col-sm-2">
-                <input type="text" class="placeholder color7" placeholder="number">
+                <input name = "people" type="number" class="placeholder color7" placeholder="0">
               </div>
             </div>
           </h2>
-
+          <h2>
+            <div class="row color7">
+              <div class="col-sm-4">
+                <label class="newTrip">Style of Trip</label>
+              </div>
+              <div class="col-sm-2">
+                <input name = "style" type="text" class="placeholder color7" placeholder="style">
+              </div>
+            </div>
+          </h2>
           <button class="color2 color6 btn btn-lg btn-primary btn-block" type="submit">Create</button>
 
         </form>
