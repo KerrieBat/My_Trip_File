@@ -73,26 +73,26 @@ app.get('/new', function(req, res) {
     res.render('pages/newTrip')
 })
 
-// // edit trips page
-// app.get('/myTrips', function(req, res) {
-//   db.collection('quotes').find().toArray(function(err, results) {
-//   if (err) return console.log(err)
-//   var trips = [
-//     { name: 'Europe 2017', days: 12 },
-//             { name: 'USA', days: 15 },
-//             { name: 'England', days: 10 }
-//         ]
-//   var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
-//
-//
-//     res.render('pages/edit_trip', {
-//         quotes: results,
-//         trips: trips,
-//         tagline: tagline
-//     })
-//   })
-// })
-//
+// edit trips page
+app.get('/edit', function(req, res) {
+  db.collection('quotes').find().toArray(function(err, results) {
+  if (err) return console.log(err)
+  var trips = [
+    { name: 'Europe 2017', days: 12 },
+            { name: 'USA', days: 15 },
+            { name: 'England', days: 10 }
+        ]
+  var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
+
+
+    res.render('pages/editTrip', {
+        quotes: results,
+        trips: trips,
+        tagline: tagline
+    })
+  })
+})
+
 
 // view trips page
 app.get('/myTrips', function(req, res) {
@@ -107,9 +107,9 @@ app.get('/itinary', function(req, res) {
 app.get('/share', function(req, res) {
     res.render('pages/shareTrip')
 })
-app.get('/edit', function(req, res) {
-    res.render('pages/editTrip')
-})
+// app.get('/edit', function(req, res) {
+//     res.render('pages/editTrip')
+// })
 
 //edit trip and itinary nav bar
 app.get('/flights', function(req, res) {

@@ -1,0 +1,33 @@
+.signin {
+  max-width: 330px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.signup {
+  max-width: 330px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.placeholder {
+  font-size: 0.7em;
+  padding-left: 1em;
+}
+h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+a {
+  color: #CDCDCD;
+}
+a:hover {
+  color: #E9E9E9;
+}
+
+.btn:hover {
+  background-color: #E9E9E9;
+  color: #88BBD6;
+}
+label {
+  color: #88BBD6;
+}

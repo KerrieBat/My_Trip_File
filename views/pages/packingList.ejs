@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+      <div class="jumbotron">
+          <h1>Packing List</h1>
+          <div class="row itinDeets">
+            <div class="col-sm-4">
+              trip name ....
+            </div>
+            <div class="col-sm-4">
+              days ....
+            </div>
+          </div>
+      </div>
+      <!-- packing list input form -->
+      <div class="container">
+        <form action = "/packingList" method = "POST" class="">
+          <h4>
+            <div class="row color7">
+              <div class="col-sm-3">
+                <input type="number" class="placeholder color7">
+              </div>
+              <div class="col-sm-3">
+                <label class="newTrip">pairs of socks</label>
+              </div>
+            </div>
+          </h4>
+          <h4>
+            <div class="row color7">
+              <div class="col-sm-3">
+                <input type="number" class=" color7">
+              </div>
+              <div class="col-sm-3">
+                <label class="newTrip">pairs of shoes</label>
+              </div>
+            </div>
+          </h4>
+          <div class="row">
+            <div class="col-sm-3">
+              <button class="color2 color6 btn btn-lg btn-primary btn-block" type="submit">Save</button>
+            </div>
+            <div class="col-sm-3">
+              <button class="color2 color6 btn btn-lg btn-primary btn-block" type="submit">Print</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+
+    </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>
