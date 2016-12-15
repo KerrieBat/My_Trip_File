@@ -6,8 +6,22 @@ html {
   background-color: #E9E9E9;
 
 }
-
-
+.about {
+  background-image:url("/images/borobodour.JPG");
+  background-size: cover;
+  height:100vh;
+  width:100%;
+}
+.logpage {
+  background-image:url("/images/krabi2.JPG");
+  background-size: cover;
+  height:100vh;
+}
+.newhol {
+  background-image:url("/images/singapore.JPG");
+  background-size: cover;
+  height:100vh;
+}
 .first {
   max-height: 30%;
 }
