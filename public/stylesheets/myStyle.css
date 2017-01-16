@@ -6,6 +6,7 @@ html {
   background-color: #E9E9E9;
 
 }
+
 .about {
   background-image:url("/images/borobodour.JPG");
   background-size: cover;
@@ -18,7 +19,7 @@ html {
   height:100vh;
 }
 .newhol {
-  background-image:url("/images/singapore.JPG");
+  background-image:url("/images/krabi2.JPG");
   background-size: cover;
   height:100vh;
 }

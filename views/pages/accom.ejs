@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+  <main>
+    <div class="jumbotron">
+        <h1>Hotel Bookings</h1>
+        <div class="row itinDeets">
+          <div class="col-sm-4">
+            trip name ....
+          </div>
+          <div class="col-sm-4">
+            days ....
+          </div>
+          <div class="col-sm-4">
+            style ....
+          </div>
+        </div>
+    </div>
+
+    <div class="container sheet">
+      <form action = "/packingList" method = "POST" class="">
+        <table class="color7 table table-sm table-bordered table-striped">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Date</th>
+              <th>Hotel</th>
+              <th>Booked thru</th>
+              <th>Reference</th>
+              <th>Address</th>
+              <th># nights</th>
+              <th># rooms</th>
+              <th>Cost</th>
+              <th>paid?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>21st August</td>
+              <td>Intercontinental, KL</td>
+              <td>hotel direct</td>
+              <td>BZ34TK</td>
+              <td>
+                <p class = "address">Menara Citibank, </p>
+                <p class = "address">165, Jalan Ampang,</p>
+                <p class = "address">Kuala Lumpur, 50450 </p>
+              </td>
+              <td>4</td>
+              <td>2</td>
+              <td>Myr 2300</td>
+              <td>Y</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="row">
+          <div class="col-sm-2">
+            <a href="/return" class="color2 color6 btn btn-lg btn-primary btn-block" type="get">Add line</a>
+          </div>
+          <div class="col-sm-2">
+            <a href="" class="color2 color6 btn btn-lg btn-primary btn-block" type="get">Save</a>
+          </div>
+          <div class="col-sm-2">
+            <a href="" class="color2 color6 btn btn-lg btn-primary btn-block" type="get">Print</a>
+          </div>
+
+            <div class="col-sm-2">
+              <a href="/return" class="color2 color6 btn btn-lg btn-primary btn-block" type="get">Return</a>
+            </div>
+
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>

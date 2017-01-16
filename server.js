@@ -164,3 +164,7 @@ app.get('/return', function(req, res) {
     //
     res.render('pages/itinerary')
 })
+app.get('/itin', function(req, res) {
+    //
+    res.render('pages/itinerary')
+})
