@@ -97,13 +97,8 @@ app.get('/new', function(req, res) {
 //             { name: 'USA', days: 15 },
 //             { name: 'England', days: 10 }
 //         ]
-//   var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
-//
-//
 //   res.render('pages/editTrip', {
-//       quotes: results,
-//       trips: trips,
-//       tagline: tagline
+//       trips: trips
 //   })
 //   })
 // })
@@ -138,7 +133,7 @@ app.get('/flights', function(req, res) {
 app.get('/accom', function(req, res) {
     res.render('pages/accom')
 })
-app.get('/land', function(req, res) {
+app.get('/car', function(req, res) {
     res.render('pages/car')
 })
 app.get('/activities', function(req, res) {
@@ -146,9 +141,6 @@ app.get('/activities', function(req, res) {
 })
 app.get('/references', function(req, res) {
     res.render('pages/references')
-})
-app.get('/insurance', function(req, res) {
-    res.render('pages/insurance')
 })
 app.get('/packing', function(req, res) {
     res.render('pages/packingList')
