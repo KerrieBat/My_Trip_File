@@ -16,7 +16,7 @@ My Trip file is an online travel protfolio which keeps all your details easily a
 
 ### Project Deliverables
 
-This project, My Trip File, is hosted online by Heroku at https://my-trip-file.herokuapp.com/main
+This project, My Trip File, is hosted online by Heroku at https://my-trip-file.herokuapp.com/
 
 
 ### Future Development
