@@ -18,8 +18,10 @@ var tripid
 MongoClient.connect('mongodb://kerriebat:test@ds061206.mlab.com:61206/my_trip_file', (err, database) => {
   // ... start the server, do something here
   if (err) return console.log(err)
+
   db = database
-  app.listen(8080, function() {
+  // app.listen(process.env.PORT || 8080)
+  app.listen(process.env.PORT || 8080, function() {
     console.log('listening on 8080')
   })
 })
